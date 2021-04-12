@@ -1,5 +1,6 @@
 package ga.fumyparli.e1;
 
+import ga.fumyparli.e1.aop.TimeTraceAop;
 import ga.fumyparli.e1.repository.JpaMemberRepository;
 import ga.fumyparli.e1.repository.MemberRepository;
 import ga.fumyparli.e1.repository.MemoryMemberRepository;
@@ -31,4 +32,9 @@ public class SpringConfig {
 //        return new MemoryMemberRepository();
         return new JpaMemberRepository(em);
     }
+
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
+//    }
 }
